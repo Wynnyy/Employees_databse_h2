@@ -65,6 +65,15 @@ public class Employee {
         this.vek = vek;
     }
 
-
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lname='" + lname + '\'' +
+                ", role='" + role + '\'' +
+                ", vek=" + vek +
+                '}';
+    }
 }
 
