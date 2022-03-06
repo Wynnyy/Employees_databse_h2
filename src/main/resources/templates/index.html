@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head>
+<body>
+<div>
+
+    <h2>Spring Boot Crud System -Student Registation</h2>
+    <tr>
+        <div align = "center" >
+            <h3><a  th:href="@{'/new'}">Add new</a></h3>
+        </div>
+        </br>
+        </br>
+    </tr>
+    <tr>
+        <div class="col-sm-5" align = "center">
+            <div class="panel-body" align = "center" >
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Age</th>
+                        <th>ID</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                        <th>Google</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr  th:each="employee : ${employeeList}">
+                        <td th:text="${employee.name}">First Name</td>
+                        <td th:text="${employee.lname}">Last Name</td>
+                        <td th:text="${employee.vek}">Age</td>
+                        <td th:text="${employee.id}">ID</td>
+
+                        <td>
+                            <a th:href="@{'/edit/' + ${employee.id}}">Edit</a>
+                        </td>
+                        <td>
+                            <a th:href="@{'/delete/' + ${employee.id}}">Delete</a>
+                        </td>
+                        <td>
+                            <a th:href="@{'https://www.google.sk/'}">GoogleBro</a>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </tr>
+
+    </tbody>
+    </table>
+    </div>
+</body>
+</html>

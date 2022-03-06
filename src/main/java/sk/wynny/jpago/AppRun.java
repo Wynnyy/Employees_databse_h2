@@ -8,12 +8,13 @@ import sk.wynny.jpago.service.MyService;
 import java.security.Provider;
 
 @Component
+@Deprecated
 public class AppRun {
     @Autowired
     MyService myService;
 
     public void run(){
-        myService.saveEmployee();
+       // myService.saveEmployee();
 
 
     }

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import sk.wynny.jpago.service.MyService;
 
 @Component
+@Deprecated
 public class DataComponent implements ApplicationListener<ContextRefreshedEvent> {
 
 
@@ -15,8 +16,8 @@ public class DataComponent implements ApplicationListener<ContextRefreshedEvent>
     MyService myService;
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        myService.saveEmployee();
-        myService.saveEmployee();
+//        myService.saveEmployee();
+//        myService.saveEmployee();
 
 
     }

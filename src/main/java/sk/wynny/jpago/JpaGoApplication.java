@@ -10,6 +10,7 @@ public class JpaGoApplication {
 	public static void main(String[] args) {
 		//ApplicationContext kontext = SpringApplication.run(JpaGoApplication.class, args);
 		SpringApplication.run(JpaGoApplication.class, args);
+
 //		AppRun appRun = kontext.getBean(AppRun.class);
 //		appRun.run();
 	}

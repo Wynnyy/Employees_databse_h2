@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Page Title</title>
+</head>
+
+
+<body>
+
+
+<div>
+    <table clas="content-table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>AGE</th>
+            <th>Last name</th>
+        </thead>
+        </tr>
+        <tr th:each="employee : ${employee}">
+            <td th:text="${employee.name}"></td>
+            <td th:text="${employee.vek}"></td>
+            <td th:text="${employee.lname}"></td>
+        </tr>
+        </table>
+</div>
+<h1>Employes list</h1>
+<li  th:each="employee : ${employee}"><span th:text="${employee.name}+ '_'+${employee.vek}">Employees names</span></li>
+<li  th:each="employee : ${employee}"><span th:text="${employee.vek}">Employees vek</span></li>
+
+</body>
+</html>
